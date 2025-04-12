@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import Logo from '../@common/SVG/Icon/Logo';
-import { NAV_ITEMS } from '@/constants/faq';
 import { useState } from 'react';
+import { HEADER_NAVIGATION } from '@/constants/@common';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +28,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center justify-between">
           <ul className="flex gap-4">
-            {NAV_ITEMS.HEADER.map((navItem) => (
+            {HEADER_NAVIGATION.map((navItem) => (
               <li key={navItem.title}>
                 <Link
                   href={navItem.path}
@@ -75,7 +75,7 @@ const Header = () => {
       >
         <nav className="px-xl mt-3xl">
           <ul className="w-full">
-            {NAV_ITEMS.HEADER.map((navItem) => (
+            {HEADER_NAVIGATION.map((navItem) => (
               <li key={navItem.title}>
                 <Link
                   className="w-full flex justify-center text-2xl font-semibold leading-[56px] mb-xs"
