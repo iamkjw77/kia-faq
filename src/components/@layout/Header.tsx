@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 z-100 w-full px-md md:px-xl">
+    <header className="fixed top-0 z-100 w-full side-padding">
       <div className="flex items-center justify-between h-[56px] lg:h-[80px]">
         {/* Logo */}
         <Link href="/">

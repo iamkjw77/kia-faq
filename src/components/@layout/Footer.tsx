@@ -4,6 +4,7 @@ import { COPYRIGHT, FOOTER_INFO } from '@/constants/@common';
 import FooterLogo from '../@common/SVG/Icon/FooterLogo';
 import Link from 'next/link';
 import { useState } from 'react';
+import TermsDialog from '../faq/TermsDialog';
 
 const Footer = () => {
   const [isTermsOpen, setIsTermsOpen] = useState(false);
@@ -14,6 +15,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary flex items-center py-[34px] px-md md:px-xl lg:h-[176px]">
+      <TermsDialog isOpen={isTermsOpen} onClose={() => setIsTermsOpen(false)} />
       <div className="lg:w-full flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-md h-full">
         {/* logo */}
         <div>
@@ -23,14 +25,12 @@ const Footer = () => {
             width="64"
             height="32"
           />
-          <small className="text-xs md:text-sm text-gray-400">
-            {COPYRIGHT}
-          </small>
+          <small className="responsive-sub-small">{COPYRIGHT}</small>
         </div>
 
         <div>
           {/* policy links */}
-          <ul className="text-sm md:text-base flex lg:justify-end mb-[10px] text-white">
+          <ul className="responsive-body-default flex lg:justify-end mb-[10px] text-white">
             <li>
               <Link
                 href="https://privacy.kia.com/overview/full-policy"
@@ -52,7 +52,7 @@ const Footer = () => {
           </ul>
 
           {/* business info */}
-          <ul className="text-xs md:text-sm grid md:grid-cols-2 lg:flex lg:flex-wrap lg:justify-end text-gray-400 text-sm">
+          <ul className="responsive-body-default grid md:grid-cols-2 lg:flex lg:flex-wrap lg:justify-end text-gray-400">
             {FOOTER_INFO.map((info) => (
               <li
                 key={info.id}
