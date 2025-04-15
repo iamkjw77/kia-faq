@@ -1,19 +1,19 @@
 export const HEADER_NAVIGATION = Object.freeze([
   {
     title: '서비스 소개',
-    path: '/',
+    path: '#',
   },
   {
     title: '자주 묻는 질문',
-    path: '/',
+    path: '#',
   },
   {
     title: '새소식',
-    path: '/',
+    path: '#',
   },
   {
     title: '상담문의',
-    path: '/',
+    path: '#',
   },
 ]);
 
