@@ -2,7 +2,7 @@ import ClientOnlyPortal from '@/components/@common/ClientOnlyPortal';
 import Select, { ISelectOption } from '@/components/@common/Select';
 import Close from '@/components/@common/SVG/Icon/Close';
 import useGetTerms from '@/hooks/faq/useGetTerms';
-import useLockBodyScroll from '@/hooks/faq/useLockBodyScroll';
+import useLockBodyScroll from '@/hooks/@common/useLockBodyScroll';
 import { ITerms } from '@/types/faq';
 import { formatDateRange } from '@/utils/date';
 import { useEffect, useState } from 'react';

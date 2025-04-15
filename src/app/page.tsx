@@ -1,4 +1,6 @@
 import PageHeader from '@/components/@layout/page/Header';
+import AppDownload from '@/components/faq/AppDownload';
+import ProcessGuide from '@/components/faq/ProcessGuide';
 import ServiceInquiry from '@/components/faq/ServiceInquiry';
 
 export default function Home() {
@@ -9,6 +11,8 @@ export default function Home() {
         subTitle="궁금하신 내용을 빠르게 찾아보세요."
       />
       <ServiceInquiry />
+      <ProcessGuide />
+      <AppDownload />
     </>
   );
 }

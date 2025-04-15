@@ -14,7 +14,7 @@ const ServiceInquiry = () => {
           `}
           >
             <a
-              className="h-full flex items-center justify-start md:justify-center border border-midnight-900 px-[1.4em]"
+              className="h-full flex items-center justify-start md:justify-center border border-midnight-900 px-[1.4em] hover:bg-gray-50"
               href={type.href}
               target={type.href}
             >
