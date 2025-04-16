@@ -8,6 +8,16 @@ import Process04 from '@/components/@common/SVG/Icon/Process04';
 import Talk from '@/components/@common/SVG/Icon/Talk';
 import Write from '@/components/@common/SVG/Icon/Write';
 
+export const FAQ = Object.freeze({
+  TITLE: '자주 묻는 질문',
+  SUB_TITLE: '궁금하신 내용을 빠르게 찾아보세요.',
+  CATEGORIES: [
+    { label: '서비스 도입', value: 'CONSULT' },
+    { label: '서비스 이용', value: 'USAGE' },
+  ],
+  DEFAULT_SUBCATEGORY: { id: 'ALL', name: '전체' },
+});
+
 export const SERVICE_INQUIRY = Object.freeze({
   TITLE: '서비스 문의',
   TYPES: [

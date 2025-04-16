@@ -1,6 +1,6 @@
 'use client';
 
-import { COPYRIGHT, FOOTER_INFO } from '@/constants/@common';
+import { FOOTER_INFO } from '@/constants/@common';
 import FooterLogo from '../@common/SVG/Icon/FooterLogo';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -51,7 +51,9 @@ const Footer = () => {
               width="64"
               height="32"
             />
-            <small className="responsive-sub-small">{COPYRIGHT}</small>
+            <small className="responsive-sub-small">
+              {FOOTER_INFO.COPYRIGHT}
+            </small>
           </div>
 
           <div>
@@ -79,7 +81,7 @@ const Footer = () => {
 
             {/* business info */}
             <ul className="responsive-body-default grid md:grid-cols-2 lg:flex lg:flex-wrap lg:justify-end text-gray-400">
-              {FOOTER_INFO.map((info) => (
+              {FOOTER_INFO.COMPANY_DETAILS.map((info) => (
                 <li
                   key={info.id}
                   className="leading-normal lg:w-auto lg:ml-[12px] lg:mr-0 mr-[12px]"

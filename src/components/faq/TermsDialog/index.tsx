@@ -1,9 +1,9 @@
 import ClientOnlyPortal from '@/components/@common/ClientOnlyPortal';
 import Select, { ISelectOption } from '@/components/@common/Select';
 import Close from '@/components/@common/SVG/Icon/Close';
-import useGetTerms from '@/hooks/faq/useGetTerms';
+import useGetTerms from '@/hooks/terms/useGetTerms';
 import useLockBodyScroll from '@/hooks/@common/useLockBodyScroll';
-import { ITerms } from '@/types/faq';
+import { ITerms } from '@/types/terms';
 import { formatDateRange } from '@/utils/date';
 import { useEffect, useState } from 'react';
 
