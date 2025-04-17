@@ -669,15 +669,6 @@
       "categoryId": "VEHICLE"
     },
     {
-      "id": 83,
-      "categoryName": "차량문의",
-      "subCategoryName": "반납",
-      "question": "반납하기 버튼을 눌렀는데 반납 처리가 되지 않아요.",
-      "answer": "\u003cp\u003e\u003cspan style=\"font-size: '13pt'; color: rgba(106, 122, 135, 1); word-break: keep-all;\"\u003e차량 반납 시에는 아래 반납 가능 조건이 충족되어야 정상적으로 반납됩니다. \u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cspan style=\"font-size: '13pt'; color: rgba(106, 122, 135, 1); word-break: keep-all;\"\u003e  ① 반납 위치 : 대여했던 K존(주차구역)에 반납\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cspan style=\"font-size: '13pt'; color: rgba(106, 122, 135, 1); word-break: keep-all;\"\u003e  ② 차량 라이트/시동 상태 : 라이트/시동 OFF 상태인지 확인\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cspan style=\"font-size: '13pt'; color: rgba(106, 122, 135, 1); word-break: keep-all;\"\u003e  *가(반)시동 상태에서는 반납불가\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cspan style=\"font-size: '13pt'; color: rgba(106, 122, 135, 1); word-break: keep-all;\"\u003e  ③ 차량 문/창문 상태 : 차량 문이 정상적으로 닫혀 있고 잠금된 상태인지 확인\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cspan style=\"font-size: '13pt'; color: rgba(106, 122, 135, 1); word-break: keep-all;\"\u003e  *뒷문+트렁크 열린 상태에서는 반납 불가\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cspan style=\"font-size: '13pt'; color: rgba(106, 122, 135, 1); word-break: keep-all;\"\u003e시동을 끄고 모든 반납 가능 조건을 충족했는데도 불구하고 반납이 되지 않는다면 고객센터로 문의해주시기 바랍니다.\u003c/span\u003e\u003c/p\u003e",
-      "tabId": "USAGE",
-      "categoryId": "VEHICLE"
-    },
-    {
       "id": 84,
       "categoryName": "차량문의",
       "subCategoryName": "반납",
@@ -692,15 +683,6 @@
       "subCategoryName": "반납",
       "question": "예약한 장소가 아닌 다른 주차장에 차량을 반납해도 되나요?",
       "answer": "\u003cp\u003e차량은 꼭 대여한 K존 (주차구역)에 반납해 주셔야 합니다. 이외 지역에 주차 시 일반 차량으로 간주되어 주차비가 발생하거나 견인 처리가 될 수 있습니다.\u003c/p\u003e\u003cp\u003e고객센터와 사전 연락 없이 지정된 차고지에 반납하지 않을 경우 10,000원의 페널티 요금 및 페널티 점수가 부과되며 이외 모든 발생 실비(견인비, 불법주차 과태료 등)는 전액 고객님께 청구됩니다.\u003c/p\u003e\u003cp\u003e부득이한 상황으로 지정된 장소에 반납이 불가한 경우 고객센터로 연락해 상담원의 안내에 따라주시기 바랍니다.\u003c/p\u003e",
-      "tabId": "USAGE",
-      "categoryId": "VEHICLE"
-    },
-    {
-      "id": 86,
-      "categoryName": "차량문의",
-      "subCategoryName": "반납",
-      "question": "반납 예정 시각보다 차량 반납을 늦게 했습니다. 어떻게 되나요?",
-      "answer": "\u003cp\u003e반납 예정 시각보다 차량 반납이 늦어지는 경우 반납 지연 요금이 부과됩니다.\u003c/p\u003e\u003cp\u003e대여 종료 시각 초과 시 서비스 지연요금이 청구되며, 10분 초과시 30분당 3,000원의 페널티 요금 및 페널티 점수와 영업손실 보상 비용이 별도로 청구됩니다.\u003c/p\u003e\u003cp\u003e반납 예정 시각보다 차량 반납이 늦어질 것으로 예상되는 경우 반드시 미리 반납 연장을 해주시기 바랍니다.\u003c/p\u003e\u003cp\u003e▶ 반납 연장 : 기아 비즈 앱 - 메인 지도 화면 - 이용 시간 옆 [연장] 클릭\u003c/p\u003e",
       "tabId": "USAGE",
       "categoryId": "VEHICLE"
     },
@@ -822,15 +804,6 @@
       "categoryId": "VEHICLE"
     },
     {
-      "id": 82,
-      "categoryName": "차량문의",
-      "subCategoryName": "반납",
-      "question": "차량 반납은 어떻게 하나요?",
-      "answer": "\u003cp\u003e운행 후 스마트키에서 [반납하기]를 눌러 차량을 반납할 수 있습니다.\u003c/p\u003e\u003cp\u003e차량 반납 시에는 아래 반납 가능 조건이 충족되어야 정상적으로 반납됩니다.\u003c/p\u003e\u003cp\u003e① 반납 위치 : 대여했던 K존(주차구역)에 반납\u003c/p\u003e\u003cp\u003e② 차량 라이트/시동 상태 : 라이트/시동 OFF 상태인지 확인\u003c/p\u003e\u003cp\u003e*가(반)시동 상태에서는 반납불가\u003c/p\u003e\u003cp\u003e③ 차량 문/창문 상태 : 차량 문이 정상적으로 닫혀 있고 잠금된 상태인지 확인\u003c/p\u003e\u003cp\u003e*뒷문+트렁크 열린 상태에서는 반납 불가\u003c/p\u003e\u003cp\u003e반납 전 두고 가는 개인 용품이 없는지 체크해주시고 및 쓰레기를 반드시 수거한 뒤, 스마트키를 통해 문 잠금 후 반납을 진행해 주세요.\u003c/p\u003e\u003cp\u003e위 조건을 모두 충족했음에도 불구하고 차량 반납이 불가능할 경우 번거로우시더라도 고객센터로 연락 주시면 도움을 드리겠습니다.\u003c/p\u003e",
-      "tabId": "USAGE",
-      "categoryId": "VEHICLE"
-    },
-    {
       "id": 83,
       "categoryName": "차량문의",
       "subCategoryName": "반납",
@@ -840,47 +813,11 @@
       "categoryId": "VEHICLE"
     },
     {
-      "id": 84,
-      "categoryName": "차량문의",
-      "subCategoryName": "반납",
-      "question": "차량을 반납하려는데 K존에 주차할 공간이 없어요.",
-      "answer": "\u003cp\u003eK존 만차 등으로 주차가 불가능할 경우 번거로우시더라도 고객센터로 연락 주시면 바로 처리를 도와드리겠습니다.\u003c/p\u003e\u003cp\u003e*거주자 우선 주차 구역 또는 주차 라인이 아닌 곳에 반납하지 말아주세요.\u003c/p\u003e\u003cp\u003e*(고객센터와 사전 연락 없이) 지정된 차고지에 반납하지 않을 경우 페널티 비용(10,000원)+페널티 점수(5점)가 부과되며 이 외 모든 발생 실비(견인비, 불법주차 과태료 등)가 전액 고객님께 청구됩니다.\u003c/p\u003e",
-      "tabId": "USAGE",
-      "categoryId": "VEHICLE"
-    },
-    {
-      "id": 85,
-      "categoryName": "차량문의",
-      "subCategoryName": "반납",
-      "question": "예약한 장소가 아닌 다른 주차장에 차량을 반납해도 되나요?",
-      "answer": "\u003cp\u003e차량은 꼭 대여한 K존 (주차구역)에 반납해 주셔야 합니다. 이외 지역에 주차 시 일반 차량으로 간주되어 주차비가 발생하거나 견인 처리가 될 수 있습니다.\u003c/p\u003e\u003cp\u003e고객센터와 사전 연락 없이 지정된 차고지에 반납하지 않을 경우 10,000원의 페널티 요금 및 페널티 점수가 부과되며 이외 모든 발생 실비(견인비, 불법주차 과태료 등)는 전액 고객님께 청구됩니다.\u003c/p\u003e\u003cp\u003e부득이한 상황으로 지정된 장소에 반납이 불가한 경우 고객센터로 연락해 상담원의 안내에 따라주시기 바랍니다.\u003c/p\u003e",
-      "tabId": "USAGE",
-      "categoryId": "VEHICLE"
-    },
-    {
       "id": 86,
       "categoryName": "차량문의",
       "subCategoryName": "반납",
       "question": "반납 예정 시각보다 차량 반납을 늦게 했습니다. 어떻게 되나요?",
       "answer": "\u003cp\u003e반납 예정 시각보다 차량 반납이 늦어지는 경우 반납 지연 요금이 부과됩니다.\u003c/p\u003e\u003cp\u003e대여 종료 시각 초과 시 서비스 지연요금이 청구되며, 10분 초과시 30분당 3,000원의 페널티 요금 및 페널티 점수와 영업손실 보상 비용이 별도로 청구됩니다.\u003c/p\u003e\u003cp\u003e반납 예정 시각보다 차량 반납이 늦어질 것으로 예상되는 경우 반드시 미리 반납 연장을 해주시기 바랍니다.\u003c/p\u003e\u003cp\u003e▶ 반납 연장 : 기아 비즈 앱 - 메인 지도 화면 - 이용 시간 옆 [연장] 클릭\u003c/p\u003e",
-      "tabId": "USAGE",
-      "categoryId": "VEHICLE"
-    },
-    {
-      "id": 87,
-      "categoryName": "차량문의",
-      "subCategoryName": "반납",
-      "question": "반납 예정 시각보다 차량을 일찍 반납하면 환불을 받을 수 있나요?",
-      "answer": "\u003cp\u003e\u003cspan style=\"color:rgba(106,122,135,1);font-size:\u0026#39;13pt\u0026#39;;\"\u003e\u003cspan style=\"word-break:keep-all;\"\u003e기아 비즈의 차량은 대여 계약 시 설정된 대여 시작 시간 및 반납 시간에 따라 요금이 부과되며, 정해진 반납 시간보다 일찍 반납을 할 경우에도 별도의 환불은 불가능합니다.\u003c/span\u003e\u003c/span\u003e\u003cbr\u003e\u003cspan style=\"color:rgba(106,122,135,1);font-size:\u0026#39;13pt\u0026#39;;\"\u003e\u003cspan style=\"word-break:keep-all;\"\u003e바로 퇴근하기 또는 1Day+를 추가로 구매하여 기존 대여건이 연장된 경우(이어타기)에도 앞선 대여 이용시간내 반납을 하더라도 환불이 되지 않으니 이점 양지 부탁 드립니다.\u003c/span\u003e\u003c/span\u003e\u003cbr\u003e\u003cspan style=\"color:rgba(106,122,135,1);font-size:\u0026#39;13pt\u0026#39;;\"\u003e\u003cspan style=\"word-break:keep-all;\"\u003e(예시. 퇴출근권 구매 후 1Day+ 추가 구매 : 1Day+ 사용 전 차량을 반납하더라도 미사용건에 대한 환불 및 재대여 생성 불가)\u003c/span\u003e\u003c/span\u003e\u003c/p\u003e",
-      "tabId": "USAGE",
-      "categoryId": "VEHICLE"
-    },
-    {
-      "id": 88,
-      "categoryName": "차량문의",
-      "subCategoryName": "반납",
-      "question": "차량 내부가 지저분한 상태로 반납하면 어떻게 되나요?",
-      "answer": "\u003cp\u003e다음과 같은 행위로 차량 내부가 오염되었을 경우, 페널티 요금 및 점수가 부과됩니다.\u003c/p\u003e\u003cp\u003e이로 인해 발생한 실내 세차 비용 또한 고객에게 별도 청구됩니다. 함께 쓰는 공유 차량인 만큼 사용 에티켓을 꼭 지켜주시길 바랍니다.\u003c/p\u003e\u003cp\u003e① 차량 내 흡연 행위 발각(담배, 전자담배, 비타민 스틱 등) - 페널티 요금 10,000원+페널티 점수 3점+실내 세차비용(승용 10만원, SUV·승합 20만원) 보상 청구\u003c/p\u003e\u003cp\u003e② 차량 내 쓰레기 및 오물 투기, 방치로 인한 오염, 악취 유발 - 페널티 요금 10,000원+페널티 점수 3점+실내 세차비용(승용 10만원, SUV·승합 20만원) 보상 청구\u003c/p\u003e\u003cp\u003e③ 반려동물 동승하여 악취 유발 및 실내 오염 - 페널티 요금 10,000원+페널티 점수 3점+실내 세차비용(승용 10만원, SUV·승합 20만원) 보상 청구\u003c/p\u003e\u003cp\u003e*페널티 점수 누적 시 서비스 이용 및 회원 자격이 정지될 수 있습니다.\u003c/p\u003e\u003cp\u003e*페널티 금액은 피해 발생으로 인한 최소 운영 비용을 근거로 책정되며, 페널티 제도는 언제든지 그 필요성 및 활용성에 따라 개정될 수 있습니다.\u003c/p\u003e",
       "tabId": "USAGE",
       "categoryId": "VEHICLE"
     },

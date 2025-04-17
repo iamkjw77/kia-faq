@@ -4,7 +4,7 @@ import SectionContainer from '../@layout/SectionContainer';
 const ServiceInquiry = () => {
   return (
     <SectionContainer title={SERVICE_INQUIRY.TITLE}>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[12px] md:gap-[24px] mx-[12px]">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[12px] md:gap-[24px]">
         {SERVICE_INQUIRY.TYPES.map((type, index) => (
           <li
             key={type.id}

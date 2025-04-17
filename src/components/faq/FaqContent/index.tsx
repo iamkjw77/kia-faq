@@ -13,6 +13,7 @@ import { FAQ } from '@/constants/faq';
 import useGetCategories from '@/hooks/faq/useGetCategories';
 import useGetFaq from '@/hooks/faq/useGetFaq';
 import { useEffect, useMemo, useState } from 'react';
+import Plus from '@/components/@common/SVG/Icon/Plus';
 
 const FaqContent = () => {
   const { selected: tabId } = useTabsContext();
@@ -57,8 +58,12 @@ const FaqContent = () => {
     if (faq?.data) {
       const newItems: AccordionItem[] = faq.data.map((item) => ({
         id: item.id,
-        subTitle: item.subCategoryName,
         title: item.question,
+        categoryName: item.categoryName,
+        subCategoryName:
+          item.tabId === FAQ.CATEGORIES[1].value
+            ? item.subCategoryName
+            : undefined,
         content: item.answer,
       }));
 
@@ -105,15 +110,19 @@ const FaqContent = () => {
         onSearch={handleSearch}
       />
       {searchKeyword && (
-        <div>
-          <div>{`검색결과 총 ${faq?.totalCount}건`}</div>
-          <button type="button" onClick={handleReset}>
+        <div className="flex items-center justify-between my-sm md:my-[20px] lg:my-md">
+          <div className="text-midnight-900 text-base md:text-lg lg:text-[20px] xl:text-2xl font-bold">{`검색결과 총 ${faq?.totalCount}건`}</div>
+          <button
+            className="cursor-pointer flex items-center gap-0.5 px-[xxs] text-sm md:text-base"
+            type="button"
+            onClick={handleReset}
+          >
             <Refresh title="검색 초기화" width="24" height="24" />
             검색초기화
           </button>
         </div>
       )}
-      <div className="flex flex-wrap pb-md md:pb-lg lg:pb-[40px] xl:pb-xl border-b-2 border-midnight-900">
+      <div className="flex flex-wrap pb-sm md:pb-[20px] lg:pb-md border-b-2 border-midnight-900">
         {subCategories?.map((sub) => (
           <Chip
             key={sub.id}
@@ -127,18 +136,26 @@ const FaqContent = () => {
       {faqList.length > 0 ? (
         <AccordionList items={faqList} />
       ) : (
-        <div>
-          <NoData title="검색 결과가 없습니다." width="32" height="32" />
-          검색결과가 없습니다.
+        <div className="py-[120px] lg:py-[160px] flex flex-col justify-center items-center border-b border-gray-200">
+          <NoData
+            className="w-[32px] h-[32px] md:w-[48px] md:h-[48px] lg:w-[56px] lg:h-[56px] xl:w-[64px] xl:h-[64px]"
+            title="검색 결과가 없습니다."
+            width="32"
+            height="32"
+          />
+          <p className="text-gray-500 mt-xs md:mt-[12px] lg:mt-sm text-sm md:text-base lg:text-lg xl:text-xl font-semibold">
+            검색결과가 없습니다.
+          </p>
         </div>
       )}
 
       {faq?.hasNext && (
-        <div className="text-center mt-4">
+        <div className="text-center flex items-center justify-center">
           <button
             onClick={handleLoadMore}
-            className="text-sm text-blue-500 hover:underline"
+            className="text-midnight-900 flex items-center gap-1 text-sm md:text-base lg:text-lg text-blue-500 mt-sm md:mt-lg lg:mt-[40px] font-semibold cursor-pointer h-[40px] md:h-xl lg:h-[56px]"
           >
+            <Plus title="더보기" width="16" height="16" />
             더보기
           </button>
         </div>

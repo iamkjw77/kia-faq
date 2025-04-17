@@ -44,7 +44,7 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center justify-between">
-              <ul className="flex gap-4">
+              <ul className="flex gap-[2rem]">
                 {HEADER_NAVIGATION.map((navItem) => (
                   <li key={navItem.title}>
                     <Link
