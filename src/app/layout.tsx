@@ -34,7 +34,9 @@ export default function RootLayout({
       >
         <QueryProvider>
           <Header />
-          <main className="side-padding mt-[56px] lg:mt-3xl">{children}</main>
+          <main className="side-padding pb-3xl mt-[56px] lg:mt-3xl m">
+            <div className="max-w-[1240px] mx-auto">{children}</div>
+          </main>
           <Footer />
         </QueryProvider>
       </body>

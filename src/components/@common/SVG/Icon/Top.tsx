@@ -1,0 +1,30 @@
+import SVG, { ISVG } from '..';
+
+const Top = ({ width, height, color = '#05141F', ...rest }: ISVG) => {
+  return (
+    <SVG
+      width={width}
+      height={height}
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...rest}
+    >
+      <g clipPath="url(#clip0_1921_18167)">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M22.7 13.3667L14 4.66678L5.30005 13.3667L6.94996 15.0167L12.8334 9.13322V23.3334H15.1667V9.13333L21.05 15.0167L22.7 13.3667Z"
+          fill={color}
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_1921_18167">
+          <rect width="28" height="28" fill="white" />
+        </clipPath>
+      </defs>
+    </SVG>
+  );
+};
+
+export default Top;

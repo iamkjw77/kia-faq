@@ -1,4 +1,4 @@
-import { fetchAllTerms } from '@/apis/@common';
+import { fetchAllTerms } from '@/apis/terms';
 import { COMMON_KEYS } from '@/constants/@queryKeys';
 import { useQuery } from '@tanstack/react-query';
 
