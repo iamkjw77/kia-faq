@@ -1,6 +1,20 @@
 import { useEffect, useRef, useState } from 'react';
 import Arrow from '../SVG/Icon/Arrow';
 
+/**
+ *  @Accordion
+ *    @사용목적
+ *      1) 특정 항목에 대한 상세 정보를 확장/축소 형태로 보여주는 UI 컴포넌트
+ *      2) 모바일 및 데스크탑 화면에 최적화된 반응형 디자인 적용
+ *
+ *    @주요기능
+ *      1) 클릭 시 상세 내용 토글 (열림/닫힘 상태 관리)
+ *      2) 카테고리, 서브카테고리, 제목, 내용을 계층적으로 렌더링
+ *      3) HTML 콘텐츠(`dangerouslySetInnerHTML`)와 일반 텍스트 모두 지원
+ *      4) 에니메이션 효과를 통해 부드러운 열림/닫힘 전환 제공
+ *
+ */
+
 export interface AccordionItem {
   id: string | number;
   title: string;
@@ -10,9 +24,13 @@ export interface AccordionItem {
 }
 
 interface AccordionProps {
+  /** 아코디언에 렌더링될 개별 항목 데이터 */
   item: AccordionItem;
+  /** 현재 항목의 열림 상태 (true: 열림, false: 닫힘) */
   isOpen: boolean;
+  /** 항목을 클릭했을 때 열림/닫힘을 제어하는 콜백 함수 */
   onClick: () => void;
+  /** content가 HTML 형식일 경우 true 설정 (기본값: false) */
   isHtml?: boolean;
 }
 
@@ -91,7 +109,7 @@ const Accordion = ({ item, isOpen, onClick, isHtml }: AccordionProps) => {
         }}
         className="text-sm text-gray-600"
       >
-        <div className="pb-4 px-sm py-0 md:px-md md:py-md lg:py-lg xl:px-lg xl:py-[40px]">
+        <div className="pb-4 px-sm py-md md:px-md md:py-md lg:py-lg xl:px-lg xl:py-[40px]">
           {isHtml ? (
             <p
               className="pb-4 text-sm text-gray-600 !text-sm md:!text-base lg:!text-lg xl:!text-xl !text-midnight-900 font-medium"

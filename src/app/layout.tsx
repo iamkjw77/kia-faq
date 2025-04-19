@@ -6,6 +6,7 @@ import { siteConfig } from '@/config/site';
 import Header from '@/components/@layout/Header';
 import Footer from '@/components/@layout/Footer';
 import QueryProvider from '@/providers/QueryProvider';
+import ErrorBoundary from '@/providers/ErrorBoundary';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -33,11 +34,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <QueryProvider>
-          <Header />
-          <main className="side-padding pb-3xl mt-[56px] lg:mt-3xl m">
-            <div className="max-w-[1240px] mx-auto">{children}</div>
-          </main>
-          <Footer />
+          <ErrorBoundary>
+            <Header />
+            <main className="side-padding pb-3xl mt-[56px] lg:mt-3xl m">
+              <div className="max-w-[1240px] mx-auto">{children}</div>
+            </main>
+            <Footer />
+          </ErrorBoundary>
         </QueryProvider>
       </body>
     </html>

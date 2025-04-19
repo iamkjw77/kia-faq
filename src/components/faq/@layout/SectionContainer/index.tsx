@@ -1,4 +1,5 @@
 interface SectionContainerProps {
+  /** 섹션 제목 */
   title: string;
   children: React.ReactNode;
 }

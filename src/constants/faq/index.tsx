@@ -33,7 +33,6 @@ export const SERVICE_INQUIRY = Object.freeze({
         />
       ),
       href: '#',
-      target: '_self',
     },
     {
       id: 'submit-inquiry',
@@ -47,7 +46,6 @@ export const SERVICE_INQUIRY = Object.freeze({
         />
       ),
       href: 'https://wiblebiz.kia.com/Counsel',
-      target: '_blank',
     },
     {
       id: 'contact-kakao',
@@ -62,7 +60,6 @@ export const SERVICE_INQUIRY = Object.freeze({
         />
       ),
       href: 'https://pf.kakao.com/_xfLxjdb',
-      target: '_blank',
     },
   ],
 });

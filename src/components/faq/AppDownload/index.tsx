@@ -7,17 +7,17 @@ const AppDownload = () => {
         {APP_DOWNLOAD.TITLE}
       </h2>
       <ul className="flex flex-col md:flex-row gap-[12px] md:gap-sm">
-        {APP_DOWNLOAD.TYPE.map((type) => (
-          <li key={type.id}>
+        {APP_DOWNLOAD.TYPE.map(({ id, path, icon, title }) => (
+          <li key={id}>
             <a
-              href={type.path}
+              href={path}
               target="_blank"
               rel="noreferrer"
               className="flex items-center justify-center bg-white w-[264px] lg:w-[296px] h-[56px] lg:h-[60px] rounded-[8px]"
             >
-              {type.icon}
+              {icon}
               <span className="text-sm md:text-base lg:lg font-semibold">
-                {type.title}
+                {title}
               </span>
             </a>
           </li>

@@ -18,7 +18,15 @@ export default defineConfig([
   pluginReact.configs.flat.recommended,
   {
     rules: {
-      'react/react-in-jsx-scope': 'off', // React 17 이상에서는 더 이상 필요하지 않음
+      'react/react-in-jsx-scope': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrors: 'none',
+        },
+      ],
     },
   },
 ]);

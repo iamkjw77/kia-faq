@@ -9,7 +9,7 @@ const AccordionList = ({ items }: AccordionListProps) => {
   const [openId, setOpenId] = useState<string | number | null>(null);
 
   return (
-    <div>
+    <>
       {items.map((item) => (
         <Accordion
           key={item.id}
@@ -19,7 +19,7 @@ const AccordionList = ({ items }: AccordionListProps) => {
           isHtml
         />
       ))}
-    </div>
+    </>
   );
 };
 

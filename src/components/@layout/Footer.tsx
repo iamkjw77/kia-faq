@@ -3,7 +3,7 @@
 import { FOOTER_INFO } from '@/constants/@common';
 import FooterLogo from '../@common/SVG/Icon/FooterLogo';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import TermsDialog from '../faq/TermsDialog';
 import Top from '../@common/SVG/Icon/Top';
 import useInView from '@/hooks/@common/useInView';
@@ -13,16 +13,18 @@ const Footer = () => {
   const [isTermsOpen, setIsTermsOpen] = useState(false);
   const [isShowGoTop, setIsShowGoTop] = useState(false);
 
+  // Footer 요소의 뷰포트 진입 여부 확인
   const { ref, isIntersecting } = useInView();
 
-  const handleGoTop = () => {
+  const handleGoTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  }, []);
 
-  const handleOpenTermsDialog = () => {
+  const handleOpenTermsDialog = useCallback(() => {
     setIsTermsOpen((prevIsOpen) => !prevIsOpen);
-  };
+  }, []);
 
+  // 스크롤 이벤트에 따라 "맨 위로" 버튼 표시 여부 결정
   useEffect(() => {
     const handleScroll = throttle(() => {
       setIsShowGoTop(window.scrollY > 100);
@@ -38,12 +40,13 @@ const Footer = () => {
         ref={ref}
         className="relative bg-primary flex items-center py-[34px] px-md md:px-xl lg:h-[176px]"
       >
+        {/* 이용약관 다이얼로그 */}
         <TermsDialog
           isOpen={isTermsOpen}
           onClose={() => setIsTermsOpen(false)}
         />
+        {/* Footer 좌측: 로고 + 카피라이트 */}
         <div className="lg:w-full flex flex-col-reverse lg:flex-row lg:items-center lg:justify-between gap-md h-full">
-          {/* logo */}
           <div>
             <FooterLogo
               className="block w-fit h-[32px] md:h-[48px] lg:h-[56px]"
@@ -56,8 +59,8 @@ const Footer = () => {
             </small>
           </div>
 
+          {/* Footer 우측: 정책 링크 + 회사 정보 */}
           <div>
-            {/* policy links */}
             <ul className="responsive-body-default flex lg:justify-end mb-[10px] text-white">
               <li>
                 <Link
@@ -79,22 +82,21 @@ const Footer = () => {
               </li>
             </ul>
 
-            {/* business info */}
             <ul className="responsive-body-default grid md:grid-cols-2 lg:flex lg:flex-wrap lg:justify-end text-gray-400">
-              {FOOTER_INFO.COMPANY_DETAILS.map((info) => (
+              {FOOTER_INFO.COMPANY_DETAILS.map(({ id, value }) => (
                 <li
-                  key={info.id}
+                  key={id}
                   className="leading-normal lg:w-auto lg:ml-[12px] lg:mr-0 mr-[12px]"
                 >
-                  {info.id === 'email' ? (
+                  {id === 'email' ? (
                     <>
                       제휴문의:{' '}
-                      <a className="underline" href={`mailto:${info.value}`}>
-                        {info.value}
+                      <a className="underline" href={`mailto:${value}`}>
+                        {value}
                       </a>
                     </>
                   ) : (
-                    info.value
+                    value
                   )}
                 </li>
               ))}
@@ -102,7 +104,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* go top button */}
+        {/* "맨 위로" 버튼 */}
         <button
           type="button"
           onClick={handleGoTop}

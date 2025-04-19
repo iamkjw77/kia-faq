@@ -1,9 +1,24 @@
-import Clear from '../../SVG/Icon/Clear';
-import Search from '../../SVG/Icon/Search';
+import Clear from '@/components/@common/SVG/Icon/Clear';
+import Search from '@/components/@common/SVG/Icon/Search';
+
+/**
+ *  @SearchInput
+ *    @사용목적
+ *      - 키워드 입력을 받아 검색을 수행하는 입력창 UI 컴포넌트
+ *
+ *    @주요기능
+ *      1) 사용자가 키워드를 입력할 수 있는 인풋 필드 제공
+ *      2) 입력값이 있을 경우 삭제 버튼(Clear) 노출
+ *      3) 검색 버튼(Search) 클릭 또는 엔터 입력 시 검색 요청 수행
+ *
+ */
 
 interface SearchInputProps {
+  /** 현재 입력된 키워드 상태 */
   keyword: string;
+  /** 키워드 변경 핸들러 */
   onKeywordChange: (keyword: string) => void;
+  /** 검색 요청 핸들러 */
   onSearch: (keyword: string) => void;
 }
 

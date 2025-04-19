@@ -1,15 +1,33 @@
 import useLockBodyScroll from '@/hooks/@common/useLockBodyScroll';
-import ClientOnlyPortal from '../../ClientOnlyPortal';
+import ClientOnlyPortal from '@/components/@common/ClientOnlyPortal';
 import { useEffect } from 'react';
+import { useEscapeClose } from '@/hooks/@common/useEscapeClose';
+
+/**
+ * @Confirm
+ *   @사용목적
+ *     - 사용자의 확인 액션을 유도하는 모달 컴포넌트
+ *
+ *   @주요기능
+ *     1) `isOpen`이 true일 경우 포털을 통해 모달 표시
+ *     2) ESC 키 입력 시 모달 닫힘
+ *     3) 모달 열릴 동안 body 스크롤 잠금
+ *     4) 외부에서 닫기 핸들러(onClose)로 닫기 제어
+ *
+ */
 
 interface ConfirmProps {
+  /** 모달 표시 여부 */
   isOpen: boolean;
+  /** 모달 닫기 핸들러 */
   onClose: () => void;
+  /** 모달 내부에 표시할 텍스트 */
   confirmText: string;
 }
 
 const Confirm = ({ isOpen, onClose, confirmText }: ConfirmProps) => {
   useLockBodyScroll(isOpen);
+  useEscapeClose({ isOpen, onClose });
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {

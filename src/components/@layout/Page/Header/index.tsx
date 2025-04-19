@@ -1,5 +1,7 @@
 interface PageHeaderProps {
+  /** 페이지의 제목 */
   title: string;
+  /** 제목 아래에 표시될 부제목 */
   subTitle: string;
 }
 

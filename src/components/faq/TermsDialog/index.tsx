@@ -7,6 +7,7 @@ import { ITerms } from '@/types/terms';
 import { formatDateRange } from '@/utils/date';
 import { useEffect, useState } from 'react';
 import Spinner from '@/components/@common/SVG/Icon/Spinner';
+import { useEscapeClose } from '@/hooks/@common/useEscapeClose';
 
 interface TermsDialogProps {
   isOpen: boolean;
@@ -21,45 +22,46 @@ const TermsDialog = ({ isOpen, onClose }: TermsDialogProps) => {
   );
   const [selectedTerm, setSelectedTerm] = useState<ITerms | null>(null);
 
+  // 바디 스크롤 잠금
   useLockBodyScroll(isOpen);
 
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
-
-    if (isOpen) {
-      document.addEventListener('keydown', handleKeyDown);
-    }
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [isOpen, onClose]);
-
-  useEffect(() => {
+  const handleOnClose = () => {
     setSelectedHistory(allTerms[0]?.termsVersion);
+    onClose();
+  };
+
+  // ESC 키 닫기 이벤트 처리
+  useEscapeClose({ isOpen, onClose: handleOnClose });
+
+  // allTerms가 변경될 때 선택된 약관 버전 초기화
+  useEffect(() => {
+    if (allTerms.length > 0 && !selectedHistory) {
+      setSelectedHistory(allTerms[0].termsVersion);
+    }
   }, [allTerms]);
 
+  // selectedHistory가 변경될 때 선택된 약관 정보 찾기
   useEffect(() => {
-    const selected = allTerms.find(
-      (term) => term.termsVersion === selectedHistory,
-    );
+    if (selectedHistory) {
+      const selected = allTerms.find(
+        (term) => term.termsVersion === selectedHistory,
+      );
 
-    if (selected) {
-      setSelectedTerm(selected);
+      setSelectedTerm(selected || null);
     }
   }, [selectedHistory]);
 
-  if (!isOpen) return null;
+  const handleHistoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedHistory(Number(e.target.value));
+  };
 
+  // 약관 버전 드롭다운에 표시할 데이터
   const termsHistory: ISelectOption[] = allTerms?.map((terms) => ({
     label: formatDateRange(terms.startDate, terms.endDate),
     value: terms.termsVersion + '',
   }));
 
-  const handleHistoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedHistory(Number(e.target.value));
-  };
+  if (!isOpen) return null;
 
   return (
     <ClientOnlyPortal>
@@ -72,7 +74,7 @@ const TermsDialog = ({ isOpen, onClose }: TermsDialogProps) => {
             </h4>
             <button
               className="p-sm relative left-[16px]"
-              onClick={onClose}
+              onClick={handleOnClose}
               aria-label="닫기"
             >
               <Close

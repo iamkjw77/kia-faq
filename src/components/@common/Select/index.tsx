@@ -1,5 +1,13 @@
 import Dropdown from '../SVG/Icon/Dropdown';
 
+/**
+ * @Select
+ *   @사용목적
+ *     - 옵션을 선택할 수 있는 커스텀 셀렉트 박스
+ *     - 기본 HTML <select> 요소를 커스터마이징하여 사용
+ *
+ */
+
 export interface ISelectOption {
   value: string;
   label: string;
@@ -7,13 +15,13 @@ export interface ISelectOption {
 }
 
 interface ISelect extends React.HTMLAttributes<HTMLSelectElement> {
-  /** Select Options */
+  /** 드롭다운에 표시할 옵션 목록 */
   options: ISelectOption[];
-  /** Select 이름 */
+  /** 셀렉트 input의 name 속성 */
   name: string;
-  /** select value */
+  /** 현재 선택된 값 */
   selectedValue: string | number;
-  /** select onChange */
+  /** 값 변경 핸들러 */
   onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
