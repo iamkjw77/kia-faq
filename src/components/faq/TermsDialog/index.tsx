@@ -6,6 +6,7 @@ import useLockBodyScroll from '@/hooks/@common/useLockBodyScroll';
 import { ITerms } from '@/types/terms';
 import { formatDateRange } from '@/utils/date';
 import { useEffect, useState } from 'react';
+import Spinner from '@/components/@common/SVG/Icon/Spinner';
 
 interface TermsDialogProps {
   isOpen: boolean;
@@ -13,7 +14,7 @@ interface TermsDialogProps {
 }
 
 const TermsDialog = ({ isOpen, onClose }: TermsDialogProps) => {
-  const { data: allTerms = [] } = useGetTerms();
+  const { data: allTerms = [], isLoading } = useGetTerms();
 
   const [selectedHistory, setSelectedHistory] = useState(
     allTerms[0]?.termsVersion,
@@ -83,26 +84,34 @@ const TermsDialog = ({ isOpen, onClose }: TermsDialogProps) => {
             </button>
           </header>
 
-          {/* 드롭다운 영역 */}
-          <div className="flex justify-end">
-            <div className="w-full lg:w-[230px] xl:w-[289px] mb-[12px] pt-[12px] xl:pt-[16px]">
-              <Select
-                name="terms"
-                options={termsHistory}
-                onChange={handleHistoryChange}
-                selectedValue={selectedHistory}
-              />
+          {isLoading ? (
+            <div className="w-full flex items-center justify-center my-76">
+              <Spinner title="로딩중" width="56" height="56" />
             </div>
-          </div>
+          ) : (
+            <>
+              {/* 드롭다운 영역 */}
+              <div className="flex justify-end">
+                <div className="w-full lg:w-[230px] xl:w-[289px] mb-[12px] pt-[12px] xl:pt-[16px]">
+                  <Select
+                    name="terms"
+                    options={termsHistory}
+                    onChange={handleHistoryChange}
+                    selectedValue={selectedHistory}
+                  />
+                </div>
+              </div>
 
-          {/* 본문 콘텐츠 영역 */}
-          <main className="pr-xs pb-lg">
-            <p
-              dangerouslySetInnerHTML={{
-                __html: selectedTerm?.contents || '약관 내용이 없습니다.',
-              }}
-            ></p>
-          </main>
+              {/* 본문 콘텐츠 영역 */}
+              <main className="pr-xs pb-lg">
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: selectedTerm?.contents || '약관 내용이 없습니다.',
+                  }}
+                ></p>
+              </main>
+            </>
+          )}
         </div>
       </div>
     </ClientOnlyPortal>
